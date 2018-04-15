@@ -18,7 +18,9 @@ module.exports = {
       //babel
       {test:/\.js$/,use:['babel-loader'],exclude:/node_modules/},
       // css
-      {test:/\.css$/,use:['style-loader','css-loader']}
+      {test:/\.css$/,use:['style-loader','css-loader']},
+      // 图片
+      {test:/\.(jpg|png|gif)$/,use:['url-loader']}
     ]
   },
 
