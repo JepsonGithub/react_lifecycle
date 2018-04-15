@@ -21,6 +21,20 @@ import '../css/layout.css'
 
 
 export default class App extends React.Component {
+
+  componentWillMount() {
+
+    fetch('/api/movie/in_theaters')
+    .then( res => {
+      return res.json()
+    })
+    .then( res => {
+      console.log(res);
+    })
+
+  }
+
+
   render() {
     return (
       <Router>
